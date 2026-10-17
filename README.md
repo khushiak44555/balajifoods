@@ -58,6 +58,16 @@ npm run dev:api     # API on http://localhost:5000
 npm run dev:web     # UI on http://localhost:5173 (proxies /api to the API)
 ```
 
+## Hosted deployment
+
+- **Backend on Render** (https://balajifoods-cxtl.onrender.com): Root Directory `backend`,
+  Build `yarn install; yarn build`, Start `yarn start`. Set `MONGODB_URI` under Environment, and
+  allow `0.0.0.0/0` in Atlas Network Access. The backend also serves the UI, so the Render URL
+  works on its own.
+- **Frontend on Vercel** (https://balajifoods-delta.vercel.app): `vercel.json` forwards `/api/*`
+  to the Render backend, so the browser stays on one origin and no CORS setup is needed. If the
+  backend URL changes, update the `destination` in both `vercel.json` files.
+
 ## REST API
 
 | Method | Path                          | Purpose |
