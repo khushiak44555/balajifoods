@@ -1,0 +1,13 @@
+{
+  "name": "balaji-foods",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Order management for the Balaji Foods exhibition stall",
+  "scripts": {
+    "setup": "cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "dev:api": "cd backend && npm run dev",
+    "dev:web": "cd frontend && npm run dev"
+  }
+}
